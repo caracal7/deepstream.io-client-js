@@ -24,7 +24,7 @@
     "build": "npm run tsc && npm run build:dev && npm run build:prod",
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
-    "build:es6": "./node_modules/.bin/esbuild src/deepstream.ts --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outfile=dist/bundle/ds.es6.min.js",
+    "build:es6": "./node_modules/.bin/esbuild src/deepstream.ts --format=esm --bundle --minify --target=chrome58,firefox57,safari11,edge16 --outfile=dist/bundle/ds.es6.min.js",
     "rebuild": "rimraf dist && webpack",
     "clean": "rimraf dist",
     "lint": "tslint src/*.ts src/**/*.ts -t verbose",
